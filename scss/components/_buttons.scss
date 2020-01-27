@@ -13,13 +13,13 @@
     @include media-query($md) {
       padding: 10px 30px;
     }
-    & + .btn {
+    & + & {
       @include media-query($md) {
         margin-left: 10px;
       }
     }
   }
-  
+
   .default {
     background-color: $color-1;
   }
@@ -39,3 +39,12 @@
   .warning {
     background-color: $color-5;
   }
+
+  // $btn-names: ('default': $color-1, 'error': $color-2, 'info': $color-3, 'success': $color-4,  'warning': $color-5);
+
+  // @each $btn-name, $color in $btn-names {
+  //   .#{$btn-name}:hover {
+  //     background-color: lighten(#{$color}, 15%);
+  //   }
+  // } 
+    
