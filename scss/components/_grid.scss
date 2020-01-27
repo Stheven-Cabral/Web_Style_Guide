@@ -4,12 +4,21 @@
 
 .container {
     padding: 0 10px;
+    @include media-query($md) {
+      max-width: 1400px;
+      display: $bl;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   
   .row {
     display: flex;
     flex-direction: column;
     padding: 1em 10px;
+    @include media-query($md) {
+      flex-direction: row;
+    }
   }
   
   [class^=col] {
@@ -22,50 +31,86 @@
   
   .theme.col-1 {
     background-color: $color-3;
+    @include media-query($md) {
+      flex-basis: 8.33%;
+    }
   }
   
   .theme.col-2 {
     background-color: $color-5;
+    @include media-query($md) {
+      flex-basis: 16.67%;
+    }
   }
   
   .theme.col-3 {
     background-color: $color-6;
+    @include media-query($md) {
+      flex-basis: 25.00%;
+    }
   }
   
   .theme.col-4 {
     background-color: $color-7;
+    @include media-query($md) {
+      flex-basis: 8.33%;
+    }
   }
   
   .theme.col-5 {
     background-color: $color-8;
+    @include media-query($md) {
+      flex-basis: 8.33%;
+    }
   }
   
   .theme.col-6 {
     background-color: $color-9;
+    @include media-query($md) {
+      flex-basis: 8.33%;
+    }
   }
   
   .theme.col-7 {
     background-color: $color-10;
+    @include media-query($md) {
+      flex-basis: 8.33%;
+    }
   }
   
   .theme.col-8 {
     background-color: $color-11;
+    @include media-query($md) {
+      flex-basis: 8.33%;
+    }
   }
   
   .theme.col-9 {
     background-color: $color-2;
+    @include media-query($md) {
+      flex-basis: 8.33%;
+    }
   }
   
   .theme.col-10 {
     background-color: $color-4;
+    @include media-query($md) {
+      flex-basis: 8.33%;
+    }
   }
   
   .theme.col-11 {
     background-color: $color-1;
+    @include media-query($md) {
+      flex-basis: 8.33%;
+    }
   }
   
   .theme.col-12 {
     background-color: $color-12;
+    @include media-query($md) {
+      flex-basis: 8.33%;
+    }
   }
   
   .card {

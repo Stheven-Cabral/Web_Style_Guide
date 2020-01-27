@@ -1,0 +1,7 @@
+// Media query mixin
+
+@mixin media-query($val: 768px) {
+    @media (min-width: $val) {
+        @content;
+    }
+}
