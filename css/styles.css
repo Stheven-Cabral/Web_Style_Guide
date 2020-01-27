@@ -414,6 +414,18 @@ a {
   border-radius: 5px;
 }
 
+@media (min-width: 768px) {
+  .btn {
+    padding: 10px 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn + .btn {
+    margin-left: 10px;
+  }
+}
+
 .default {
   background-color: #51ddfc;
 }
@@ -476,6 +488,21 @@ a {
           flex-direction: column;
 }
 
+@media (min-width: 768px) {
+  .nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .nav-link {
   text-align: center;
   border-radius: 5px;
@@ -484,6 +511,13 @@ a {
   width: 100%;
   -webkit-transition: background-color .2s ease-in-out,  color .2s ease-in-out;
   transition: background-color .2s ease-in-out,  color .2s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .nav-link {
+    -ms-flex-preferred-size: 100px;
+        flex-basis: 100px;
+  }
 }
 
 .nav-link:hover {
@@ -519,11 +553,27 @@ a {
   margin-right: auto;
 }
 
+@media (min-width: 768px) {
+  .logo {
+    margin-left: initial;
+    margin-right: initial;
+  }
+}
+
 /* ============================================= */
 /*              Grid System                      */
 /* ============================================= */
 .container {
   padding: 0 10px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .row {
@@ -537,6 +587,23 @@ a {
   padding: 1em 10px;
 }
 
+@media (min-width: 768px) {
+  .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 [class^=col] {
   margin-top: 10px;
   -ms-flex-preferred-size: 100%;
@@ -546,80 +613,7 @@ a {
   border-radius: 5px;
 }
 
-.theme.col-1 {
-  background-color: #927bc1;
-}
-
-.theme.col-2 {
-  background-color: #fd7856;
-}
-
-.theme.col-3 {
-  background-color: #deb2ee;
-}
-
-.theme.col-4 {
-  background-color: #7ee6fd;
-}
-
-.theme.col-5 {
-  background-color: #88d9a0;
-}
-
-.theme.col-6 {
-  background-color: #4da2bb;
-}
-
-.theme.col-7 {
-  background-color: #ec9fa3;
-}
-
-.theme.col-8 {
-  background-color: #fd9f85;
-}
-
-.theme.col-9 {
-  background-color: #e4757a;
-}
-
-.theme.col-10 {
-  background-color: #63cc82;
-}
-
-.theme.col-11 {
-  background-color: #51ddfc;
-}
-
-.theme.col-12 {
-  background-color: #80e8d1;
-}
-
-.card {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-}
-
-/* ============================================= */
-/*              Media Queries                    */
-/* ============================================= */
 @media (min-width: 768px) {
-  .container {
-    max-width: 1400px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .centered {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .row {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
   [class^=col] {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -632,82 +626,152 @@ a {
         -ms-flex-align: center;
             align-items: center;
   }
+}
+
+@media (min-width: 768px) {
   [class^=col] + [class^=col] {
     margin-left: 10px;
   }
-  .col-1 {
+}
+
+.theme.col-1 {
+  background-color: #927bc1;
+}
+
+@media (min-width: 768px) {
+  .theme.col-1 {
     -ms-flex-preferred-size: 8.33%;
         flex-basis: 8.33%;
   }
-  .col-2 {
+}
+
+.theme.col-2 {
+  background-color: #fd7856;
+}
+
+@media (min-width: 768px) {
+  .theme.col-2 {
     -ms-flex-preferred-size: 16.67%;
         flex-basis: 16.67%;
   }
+}
+
+.theme.col-3 {
+  background-color: #deb2ee;
+}
+
+@media (min-width: 768px) {
   .col-3 {
     -ms-flex-preferred-size: 25.00%;
         flex-basis: 25.00%;
   }
+}
+
+.theme.col-4 {
+  background-color: #7ee6fd;
+}
+
+@media (min-width: 768px) {
   .col-4 {
     -ms-flex-preferred-size: 33.33%;
         flex-basis: 33.33%;
   }
-  .col-5 {
+}
+
+.theme.col-5 {
+  background-color: #88d9a0;
+}
+
+@media (min-width: 768px) {
+  .theme.col-5 {
     -ms-flex-preferred-size: 41.67%;
         flex-basis: 41.67%;
   }
-  .col-6 {
+}
+
+.theme.col-6 {
+  background-color: #4da2bb;
+}
+
+@media (min-width: 768px) {
+  .theme.col-6 {
     -ms-flex-preferred-size: 50.00%;
         flex-basis: 50.00%;
   }
-  .col-7 {
+}
+
+.theme.col-7 {
+  background-color: #ec9fa3;
+}
+
+@media (min-width: 768px) {
+  .theme.col-7 {
     -ms-flex-preferred-size: 58.33%;
         flex-basis: 58.33%;
   }
+}
+
+.theme.col-8 {
+  background-color: #fd9f85;
+}
+
+@media (min-width: 768px) {
   .col-8 {
     -ms-flex-preferred-size: 66.67%;
         flex-basis: 66.67%;
   }
+}
+
+.theme.col-9 {
+  background-color: #e4757a;
+}
+
+@media (min-width: 768px) {
   .col-9 {
     -ms-flex-preferred-size: 75.00%;
         flex-basis: 75.00%;
   }
-  .col-10 {
+}
+
+.theme.col-10 {
+  background-color: #63cc82;
+}
+
+@media (min-width: 768px) {
+  .theme.col-10 {
     -ms-flex-preferred-size: 83.33%;
         flex-basis: 83.33%;
   }
-  .col-11 {
+}
+
+.theme.col-11 {
+  background-color: #51ddfc;
+}
+
+@media (min-width: 768px) {
+  .theme.col-11 {
     -ms-flex-preferred-size: 91.67%;
         flex-basis: 91.67%;
   }
-  .col-12 {
+}
+
+.theme.col-12 {
+  background-color: #80e8d1;
+}
+
+@media (min-width: 768px) {
+  .theme.col-12 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-  .nav {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .nav-link {
-    -ms-flex-preferred-size: 100px;
-        flex-basis: 100px;
-  }
-  .btn {
-    padding: 10px 30px;
-  }
-  .btn + .btn {
-    margin-left: 10px;
-  }
-  .logo {
-    margin-left: initial;
-    margin-right: initial;
-  }
 }
+
+.card {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
 /*# sourceMappingURL=styles.css.map */

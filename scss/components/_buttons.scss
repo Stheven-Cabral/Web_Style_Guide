@@ -13,6 +13,11 @@
     @include media-query($md) {
       padding: 10px 30px;
     }
+    & + .btn {
+      @include media-query($md) {
+        margin-left: 10px;
+      }
+    }
   }
   
   .default {
